@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website - Thijn Opperman
 
-## Getting Started
+A modern, professional, and user-friendly personal portfolio landing page built with Next.js 14+, TypeScript, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Design**: Clean, professional, and visually appealing interface
+- **Dark Mode**: Light and dark theme support with smooth transitions
+- **Fully Responsive**: Mobile-first design that works on all devices
+- **Animations**: Subtle Framer Motion animations for enhanced user experience
+- **Performance Optimized**: Built with Next.js 14+ for optimal performance
+- **Type-Safe**: Full TypeScript support
+
+## 📋 Sections
+
+1. **Navigation Bar**: Sticky navbar with light/dark mode toggle and mobile menu
+2. **Hero Section**: Eye-catching hero with profile picture, name, and call-to-action buttons
+3. **Technologies**: Showcase of technologies and tools used
+4. **About Me**: Personal introduction section with key values
+5. **Work Methodology**: Five-step workflow visualization
+6. **Services**: Three service cards with detailed descriptions
+7. **Skills & Tools**: Comprehensive skills and tools display
+8. **Footer**: Contact section with social media links
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Theme**: next-themes for dark mode support
+
+## 📦 Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Live Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The development server will start on [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+showcase-portfolio/
+├── app/
+│   ├── layout.tsx          # Root layout with theme provider
+│   ├── page.tsx             # Main page with all sections
+│   ├── globals.css          # Global styles and theme variables
+│   └── favicon.ico
+├── components/
+│   ├── navbar.tsx           # Navigation component
+│   ├── hero.tsx             # Hero section
+│   ├── technologies.tsx     # Technologies showcase
+│   ├── about.tsx            # About me section
+│   ├── work-methodology.tsx  # Work process section
+│   ├── services.tsx          # Services section
+│   ├── skills.tsx           # Skills and tools section
+│   ├── footer.tsx            # Footer component
+│   └── theme-provider.tsx   # Theme context provider
+├── lib/
+│   └── utils.ts             # Utility functions (cn helper)
+└── public/                  # Static assets
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding Your Own Images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Replace the placeholder images in:
+- `components/hero.tsx` - Profile photo
+- `components/about.tsx` - About me photo
 
-## Deploy on Vercel
+Simply replace the placeholder divs with Next.js Image components pointing to your images in the `public` folder.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Updating Content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All text content is directly in the component files. Update the strings in each component to customize the content.
+
+### Changing Colors
+
+The color scheme is defined in `app/globals.css` using CSS variables. Modify the HSL values to change the primary colors and theme.
+
+## 🌗 Theme
+
+The site supports both light and dark modes. The theme toggle is in the navigation bar. The default theme follows the system preference.
+
+## 📝 License
+
+This project is private and intended for personal use.
+
+## 👤 Author
+
+Thijn Opperman - Front-End Developer
+
+---
+
+Built with ❤️ using Next.js and Tailwind CSS
