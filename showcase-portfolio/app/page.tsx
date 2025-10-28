@@ -16,12 +16,11 @@ export default function Home() {
           logo="/profile.png"
           logoAlt="Thijn Opperman"
           items={[
-            { label: 'Home', href: '#home' },
-            { label: 'About', href: '#about' },
-            { label: 'Projects', href: '#services' },
-            { label: 'Contact', href: '#contact' }
+            { label: 'Home', href: '/' },
+            { label: 'About me', href: '/about' },
+            { label: 'Projects', href: '/projects' }
           ]}
-          activeHref="#home"
+          activeHref="/"
           baseColor="#000"
           pillColor="#4ecb71"
           hoveredPillTextColor="#000"
