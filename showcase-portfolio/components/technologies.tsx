@@ -1,47 +1,46 @@
 "use client"
 
 import { motion } from "framer-motion"
+import LogoLoop from "./LogoLoop"
 
 const technologies = [
-  { name: "Next.js", icon: "⚡" },
-  { name: "React", icon: "⚛️" },
-  { name: "TypeScript", icon: "📘" },
-  { name: "Figma", icon: "🎨" },
-  { name: "VS Code", icon: "💻" },
-  { name: "Tailwind CSS", icon: "🎨" },
-  { name: "Git", icon: "📦" },
-  { name: "Node.js", icon: "🟢" },
+  { node: <span style={{ fontSize: '42px' }}>⚛️</span>, title: "React" },
+  { node: <span style={{ fontSize: '42px' }}>⚡</span>, title: "Next.js" },
+  { node: <span style={{ fontSize: '42px' }}>📘</span>, title: "TypeScript" },
+  { node: <span style={{ fontSize: '42px' }}>🎨</span>, title: "Tailwind CSS" },
+  { node: <span style={{ fontSize: '42px' }}>💻</span>, title: "VS Code" },
+  { node: <span style={{ fontSize: '42px' }}>📦</span>, title: "Git" },
+  { node: <span style={{ fontSize: '42px' }}>🟢</span>, title: "Node.js" },
+  { node: <span style={{ fontSize: '42px' }}>🎨</span>, title: "Figma" },
 ]
 
 export function Technologies() {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-2 -mt-2" style={{ background: '#000000' }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap items-center justify-center gap-8 lg:gap-12"
+          transition={{ duration: 0.8 }}
+          style={{ height: '70px', position: 'relative', overflow: 'hidden' }}
         >
-          {technologies.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.3 }}
-              whileHover={{ scale: 1.1 }}
-              className="flex flex-col items-center gap-2 p-4 rounded-xl hover:bg-background transition-colors"
-            >
-              <span className="text-4xl">{tech.icon}</span>
-              <span className="text-sm font-medium text-foreground/70">
-                {tech.name}
-              </span>
-            </motion.div>
-          ))}
+          <LogoLoop
+            logos={technologies}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={50}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor="#000000"
+            ariaLabel="Technologies I use"
+          />
         </motion.div>
       </div>
+      {/* Green accent line */}
+      <div className="w-full h-px mt-2" style={{ background: 'linear-gradient(to right, transparent, rgba(78, 203, 113, 0.4), transparent)' }} />
     </section>
   )
 }
